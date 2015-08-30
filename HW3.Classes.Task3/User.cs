@@ -10,7 +10,7 @@ namespace HW3.Classes.Task3
         public readonly DateTime BirthDate;
         public readonly DateTime FillFormDate;
 
-        public User(string login, string name, string sname, DateTime birthDate, DateTime fillFormDate)
+        public User(string login, string name, string sname, DateTime birthDate)
         {
             if (login == null || name == null || sname == null)
                 throw new ArgumentNullException();
@@ -20,7 +20,7 @@ namespace HW3.Classes.Task3
                 Name = name;
                 SName = sname;
                 BirthDate = birthDate;
-                FillFormDate = fillFormDate;
+                FillFormDate = DateTime.Now;
             }           
         }
     }
